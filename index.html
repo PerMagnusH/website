@@ -16,16 +16,10 @@
 
     <style type="text/css" class="silex-style"></style>
     <script type="text/javascript" class="silex-script">
-        $(function() {
-          // this will be executed when the page is loaded
-          SC.initialize({
-            client_id: 'YOUR_CLIENT_ID',
-            redirect_uri: 'http://example.com/callback'
-          });
-          SC.stream('/tracks/293').then(function(player){
-          player.play();
-            });
-        });
+        function postYourAdd () {
+            var iframe = $("#forPostyouradd");
+            iframe.attr("src", iframe.data("src")); 
+        }
     </script>
     <style class="silex-inline-styles" type="text/css">
         .body-initial {
@@ -55,6 +49,14 @@
             width: 1200px;
         }
         
+        .silex-id-1520538271180-0 {
+            width: 279px;
+            background-color: rgb(255, 255, 255);
+            min-height: 304px;
+            top: 31px;
+            left: 61px;
+        }
+        
         .silex-id-1478366450713-3 {
             top: 100px;
             left: NaNpx;
@@ -76,7 +78,7 @@
     </style>
     <title></title>
     <script type="text/javascript" class="silex-json-styles">
-        [{"desktop":{"body-initial":{"background-color":"rgba(255,255,255,1)"},"silex-id-1474394621033-3":{"top":"5px","left":"0px"},"silex-id-1474394621032-2":{"min-height":"600px","background-color":"transparent","width":"1200px"},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"53px","width":"349px","top":"29px","left":"430px"},"silex-id-1478366444112-0":{"min-height":"100px","background-color":"transparent","width":"1200px"},"silex-id-1478366444112-1":{"top":"100px","left":"NaNpx","background-color":"transparent"},"silex-id-1478366450713-2":{"min-height":"100px","background-color":"transparent","width":"1200px"},"silex-id-1478366450713-3":{"top":"100px","left":"NaNpx","background-color":"transparent"}},"mobile":{},"componentData":{}}]
+        [{"desktop":{"body-initial":{"background-color":"rgba(255,255,255,1)"},"silex-id-1474394621033-3":{"top":"5px","left":"0px"},"silex-id-1474394621032-2":{"min-height":"600px","background-color":"transparent","width":"1200px"},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"53px","width":"349px","top":"29px","left":"430px"},"silex-id-1478366444112-0":{"min-height":"100px","background-color":"transparent","width":"1200px"},"silex-id-1478366444112-1":{"top":"100px","left":"NaNpx","background-color":"transparent"},"silex-id-1478366450713-2":{"min-height":"100px","background-color":"transparent","width":"1200px"},"silex-id-1478366450713-3":{"top":"100px","left":"NaNpx","background-color":"transparent"},"silex-id-1520538271180-0":{"width":"279px","background-color":"rgb(255, 255, 255)","min-height":"304px","top":"31px","left":"61px"}},"mobile":{},"componentData":{}}]
     </script>
 
 
@@ -98,6 +100,7 @@
 
 
 
+    <meta name="publicationPath" content="/api/1.0/github/exec/put/public/master">
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -130,7 +133,14 @@
         <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366444112-0"></div>
     </div>
     <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" data-silex-id="silex-id-1474394621033-3" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1474394621032-2"></div>
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1474394621032-2">
+            <div data-silex-type="html" class="editable-style silex-id-1520538271180-0 html-element" data-silex-id="silex-id-1520538271180-0" style="">
+                <div class="silex-element-content">
+                    <button id="postYourAdd" onclick="postYourAdd()">Button</button>
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/410478213&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
+                        src="about:blank"></iframe></div>
+            </div>
+        </div>
     </div>
     <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366450713-3 section-element" data-silex-id="silex-id-1478366450713-3" style="">
         <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366450713-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366450713-2">
