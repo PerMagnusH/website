@@ -16,9 +16,23 @@
 
     <style type="text/css" class="silex-style"></style>
     <script type="text/javascript" class="silex-script">
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            var items = location.search.substr(1).split("&");
+            for (var index = 0; index < items.length; index++) {
+                tmp = items[index].split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            }
+            return result;
+        }
+        
+        
         function postYourAdd () {
             var iframe = $("#forPostyouradd");
-            iframe.attr("src", iframe.data("src")); 
+            
+            var srcAddr = "https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/" + findGetParameter("track") + "&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=false";
+            iframe.attr("src", srcAddr); 
             $("#postYourAdd").attr("disabled", "disabled"); 
         }
     </script>
