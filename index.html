@@ -150,7 +150,7 @@
                             function postYourAdd () {
                                 var iframe = $("#forPostyouradd");
                                 var track = findGetParameter("track");
-                                var newSoundUrl = 'http://api.soundcloud.com/tracks/' + track;
+                                var newSoundUrl = 'https://api.soundcloud.com/tracks/' + track;
                                 var srcAddr = "https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/" + track + "&amp;color=%23ff5500&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=false";
                                 iframe.attr("src", srcAddr); 
                                 var newiframe = $("#forPostyouradd");
