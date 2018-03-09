@@ -186,7 +186,10 @@
                                         show_artwork: false,
                                         visual: false
                                 });
-                                
+                                widget.bind(SC.Widget.Events.FINISH, function() {
+                                        widgetIframe.style.display = "none";
+                                        
+                                });
                     
                                 widget.bind(SC.Widget.Events.READY, function() {
                                     
