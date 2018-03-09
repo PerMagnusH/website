@@ -165,13 +165,6 @@
                             widget.bind(SC.Widget.Events.READY, function() {
                               // load new widget
                               widget.play();
-                              widget.bind(SC.Widget.Events.FINISH, function() {
-                                widget.play();
-                                //widget.load(newSoundUrl, {
-                                //  show_artwork: false
-                                //});
-                            //    widget.play();
-                              });
                             });
                         
                           }());
