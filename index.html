@@ -191,7 +191,7 @@
                                 widget.bind(SC.Widget.Events.READY, function() {
                                     
                                     widget.bind(SC.Widget.Events.FINISH, function() {
-                                        widgetIframe.style.display = "block";
+                                        widgetIframe.style.display = "none";
                                         
                                     });
                                     widget.bind(SC.Widget.Events.PLAY, function() {
@@ -199,7 +199,7 @@
                                         
                                     });
                                     
-                                    widget.play();
+                                    //widget.play();
                                      // Play sound
                     
                                 });
