@@ -5,6 +5,7 @@
     <title></title>
 </head>
 <body>
+    <div id="dummy" tabindex="0"></div>
     <div>
         <iframe tabindex="-1" id="forPostyouradd" width="10%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/5646225&amp;color=%23ff5500&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false&amp;"></iframe>
 
@@ -41,12 +42,15 @@
                         if (track !== '410118795')
                         {
                             //$("#postYourAdd").attr("disabled", "disabled");
-                            widgetIframe.style.display = "none";            
+                            widgetIframe.style.display = "none";   
+                            var divelem = document.getElementById('dummy');
+                            divelem.focus();
                         }                
                     });
                 });
             }());
     </script>
     </div>
+    
 </body>
 </html>
